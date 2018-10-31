@@ -159,4 +159,9 @@ class MakeController extends BaseController
         return $this->success('调用成功。', $response);
     }
 
+    public function test()
+    {
+        //
+    }
+
 }
