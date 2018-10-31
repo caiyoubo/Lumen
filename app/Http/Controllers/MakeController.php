@@ -148,15 +148,15 @@ class MakeController extends BaseController
             return $this->error('参数有误!');
         }
         $uid = $request->input('uid');
-        $response = Curl::to('https://oauthcatch.ews.m.jaeapp.com/morefun/taobao/whetherVip')
-            ->withData(array(
+        $response = Curl::to('xxxxxxxx')    //  要调用的api
+            ->withData(array(  //  调用api所需要的请求参数
                 'mixNick'  => $uid,
                 'sellerId' => '94399436',
                 'deviceId' => 'BBBA3EAAC1',
             ))
-            ->asJson()->post();
+            ->asJson()->post(); //  被调用的api的传参方式get or post
 
-        return $this->success('根据有无member_info判断是否是会员。', $response);
+        return $this->success('调用成功。', $response);
     }
 
 }

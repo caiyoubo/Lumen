@@ -10,17 +10,10 @@ class TaoBaoController extends BaseController
     /**
      * 淘宝接口--商品信息
      *
-     * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function get_info(Request $request)
+    public function get_info()
     {
-//        $style = $request->input('style');
-//        if ( ! $style || ($style > 20))
-//        {
-//            return $this->error('参数错误!');
-//        }
-//        $goods_id = $this->get_ids($style);
         $goods_id = $this->get_goods();
         $appKey     = 'xxxxx';  // 店铺的AppKey
         $appSecret  = 'xxxxx';  // 店铺的APPSecret
@@ -50,20 +43,12 @@ class TaoBaoController extends BaseController
         return $this->success('成功！', $result);
     }
 
-
-//    protected function get_ids($style)
-//    {
-//        $query = Details::where('style', $style)->get()->toArray();
-//        $ids   = $query[array_rand($query, 1)]['goods_id'];
-//        return $ids;
-//    }
-
     public function get_goods()
     {
         $info = Details::select('*')
             ->orderByRaw('RAND()')
             ->take(18)
-            ->get()->toArray();
+            ->get()->toArray(); // 随机从数据库中取出18条数据。
         $r = $info[0]['goods_id'].",".$info[1]['goods_id'].",".$info[2]['goods_id'].",".$info[3]['goods_id'].",".$info[4]['goods_id'].",".
         $info[5]['goods_id'].",".$info[6]['goods_id'].",".$info[7]['goods_id'].",".$info[8]['goods_id'].",".$info[9]['goods_id'].",".$info[10]['goods_id']
         .",".$info[11]['goods_id'].",".$info[12]['goods_id'].",".$info[13]['goods_id'].",".$info[14]['goods_id'].",".$info[15]['goods_id'].
