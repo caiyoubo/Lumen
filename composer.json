@@ -14,7 +14,8 @@
         "orzcc/taobao-top-client": "dev-master",
         "guzzlehttp/guzzle": "~6.0",
         "ethansmart/httpbuilder": "^1.0",
-        "ixudra/curl": "^6.16"
+        "ixudra/curl": "^6.16",
+        "syscover/shoppingcart": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

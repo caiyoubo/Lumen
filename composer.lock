@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c02105744a2d8c3edd5044f16250e50",
+    "content-hash": "6ed440fd0675997066587c35741ae807",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3233,6 +3233,48 @@
             "time": "2018-10-02T16:33:53+00:00"
         },
         {
+            "name": "syscover/shoppingcart",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/syscover/shopping-cart.git",
+                "reference": "afe14105801f5906b0486d8b14ddf3d0b0a8c676"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/syscover/shopping-cart/zipball/afe14105801f5906b0486d8b14ddf3d0b0a8c676",
+                "reference": "afe14105801f5906b0486d8b14ddf3d0b0a8c676",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Syscover\\ShoppingCart\\": "src/Syscover/ShoppingCart"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "SYSCOVER SL",
+                    "email": "info@syscover.com"
+                }
+            ],
+            "description": "Shopping Cart package",
+            "keywords": [
+                "cart",
+                "laravel",
+                "pulsar",
+                "shopping",
+                "shoppingcart",
+                "syscover"
+            ],
+            "abandoned": "syscover/shopping-cart",
+            "time": "2017-02-09T10:06:50+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.1",
             "source": {
@@ -4952,7 +4994,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "orzcc/taobao-top-client": 20
+        "orzcc/taobao-top-client": 20,
+        "syscover/shoppingcart": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
