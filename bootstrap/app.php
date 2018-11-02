@@ -85,6 +85,7 @@ $app->singleton(
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Maatwebsite\Excel\ExcelServiceProvider::class);
 $app->register(Ixudra\Curl\CurlServiceProvider::class);
+$app->register(Syscover\Shoppingcart\ShoppingcartServiceProvider::class);   // 购物车服务提供者
 
 /*
 |--------------------------------------------------------------------------
