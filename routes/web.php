@@ -16,7 +16,10 @@ $router->get('get_top_api', 'TaoBaoController@get_info');
 
 $router->get('test', 'TaoBaoController@test');
 
-// ShoppingCartController
+// test
+//$router->get('login', 'Login\LoginController@index');
 
-// --post--
-$router->post('test', 'Shoppingcart\ShoppingCartController@set_add');
+//  LoginController
+$router->group(['middleware' => 'old'], function ($router){
+    $router->get('login', 'Login\LoginController@index');
+});

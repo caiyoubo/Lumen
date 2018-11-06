@@ -62,12 +62,14 @@ $app->singleton(
 */
 
 // $app->middleware([
+//     \App\Http\Middleware\OldMiddleware::class,
 //    App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
+ $app->routeMiddleware([
+     'old' => \App\Http\Middleware\OldMiddleware::class,
 //     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+ ]);
 
 /*
 |--------------------------------------------------------------------------
@@ -85,7 +87,7 @@ $app->singleton(
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Maatwebsite\Excel\ExcelServiceProvider::class);
 $app->register(Ixudra\Curl\CurlServiceProvider::class);
-$app->register(Syscover\Shoppingcart\ShoppingcartServiceProvider::class);   // 购物车服务提供者
+//$app->register(Syscover\Shoppingcart\ShoppingcartServiceProvider::class);   // 购物车服务提供者
 
 /*
 |--------------------------------------------------------------------------

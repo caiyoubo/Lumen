@@ -16,7 +16,7 @@ class OldMiddleware
     {
         if ($request->input('age') <= 18)
         {
-            return redirect('home');
+            return '对不起！您的年龄不满18岁。';
         }
 
         return $next($request);
